@@ -36,4 +36,4 @@ puts "Total calories are #{totalCal}."
 
 ending = Process.clock_gettime(Process::CLOCK_MONOTONIC)
 puts "Elapsed time = #{ending - starting} seconds"
-puts `ps -o rss #{Process.pid}`.lines.last.to_i
+puts "Memory usage = #{`ps -o rss #{Process.pid}`.lines.last.to_i}"

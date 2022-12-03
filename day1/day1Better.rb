@@ -4,5 +4,4 @@ puts ("The sum of top 3 elves carrying the most calories is #{IO.readlines("inpu
 
 ending = Process.clock_gettime(Process::CLOCK_MONOTONIC)
 puts "Elapsed time = #{ending - starting} seconds"
-require "os"
-puts `ps -o rss #{Process.pid}`.lines.last.to_i
+puts "Memory usage = #{`ps -o rss #{Process.pid}`.lines.last.to_i}"
