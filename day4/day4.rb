@@ -25,4 +25,3 @@ puts "Part 1 equals #{count1}."
 puts "Part 2 equals #{count2}."
 
 # My regular method compared the beginning and end dates for two elves.
-# My four-line method created an array of all integers between two numbers for each elf (array a and b), then used (1) a-b's length vs a's length - b's length, vice versa and (2) a-b's length vs a's length to decide if a complete or partial overlap existed
