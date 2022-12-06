@@ -10,7 +10,6 @@ while (line.strip() != '' && line.count("a-zA-Z") > 0)
     line = part1.readline
 end
 
-ship1 = ship
 while !part1.eof?
     step = part1.readline
     splitWords = ["move "," from ", " to ", "\n"]
@@ -19,7 +18,7 @@ while !part1.eof?
     from2 = stepArray[1].to_i
     to3 = stepArray[2].to_i
     for m in 1..move1 do
-        ship1[to3].unshift(ship1[from2].shift)
+        ship[to3].unshift(ship[from2].shift)
     end
 end
 
@@ -28,7 +27,15 @@ ship.each {|x| puts x.to_s}
 part1.close
 
 # Part II
-ship2 = ship
+ship2 = Array.new(10){Array.new}
+part2 = File.open("input.txt", "r")
+line = part2.readline
+while (line.strip() != '' && line.count("a-zA-Z") > 0)
+    for a in 1..9 do
+        ship2[a].push(line[a*4-3]) if line[a*4-3] != " "
+    end
+    line = part2.readline
+end
 
 while !part2.eof?
     step = part2.readline
