@@ -122,10 +122,4 @@ allFolders.each do |folder|
     end
 end
 
-sizeArray = Array.new
-allFolders.each do |folder|
-    sizeArray.push(folder.size)
-end
-puts sizeArray.sort!.to_s
-
 puts "Minimum size to delete is #{minimum}."

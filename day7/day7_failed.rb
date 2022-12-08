@@ -1,3 +1,5 @@
+#Saving this as my failed approach to this problem. The issue was that I did not consider the case where subfolders COULD share the same name. Using file/folder name as the index was incorrect.
+
 class Directory
     attr_accessor :parent, :size
     def initialize(parent = nil,  size = 0)
